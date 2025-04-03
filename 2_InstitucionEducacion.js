@@ -4,12 +4,21 @@
 // En ambos regímenes, si la nota de presentación es menor que 3.5, reprueba. 
 // Hacer la tabla de decisión y escribir el algoritmo correspondiente.
 
-let notaPresentacion = 3;
+let notaPresentacion = 5;
+let carreraDiurna = true;
 
-if (notaPresentacion >= 6) {
-    console.log("Se exime");
-} else if (notaPresentacion >= 3.5) {
-    console.log("Rinde examen");
+if (carreraDiurna) {
+    if (notaPresentacion >= 3.5) {
+        console.log("Rinde examen");
+    } else {
+        console.log("Reprueba");
+    }
 } else {
-    console.log("Reprueba");
+    if (notaPresentacion >= 6) {
+        console.log("Eximido");
+    } else if (notaPresentacion >= 3.5) {
+        console.log("Rinde examen");
+    } else {
+        console.log("Reprueba");
+    }
 }
